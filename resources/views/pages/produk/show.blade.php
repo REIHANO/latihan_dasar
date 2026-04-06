@@ -31,6 +31,7 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Nama Produk</th>
+                         <th scope="col">Deskripsi</th>
                         <th scope="col">Stok</th>
                         <th scope="col">Harga</th>
                         <th scope="col">Aksi</th>
@@ -41,6 +42,7 @@
                     <tr>
                         <th scope="row">{{ $key + 1 }}</th>
                         <td>{{ $item->nama_produk }}</td>
+                        <td>{{ $item->deskripsi_produk ?? 'Tidak ada deskripsi' }}</td>                     
                         <td>0</td> 
                         <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
                         <td>
