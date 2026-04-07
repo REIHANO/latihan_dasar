@@ -19,6 +19,11 @@
                     @error('harga') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
                 <div class="mb-3">
+    <label>Stok Produk</label>
+    <input type="number" name="stok" class="form-control" value="{{ old('stok') }}">
+    @error('stok') <small class="text-danger">{{ $message }}</small> @enderror
+</div>
+                <div class="mb-3">
                     <label>Deskripsi</label>
                     <textarea name="deskripsi_produk" class="form-control">{{ old('deskripsi_produk') }}</textarea>
                     @error('deskripsi_produk') <small class="text-danger">{{ $message }}</small> @enderror

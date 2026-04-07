@@ -27,16 +27,11 @@ public function store(Request $request)
     $request->validate([
         'nama_produk' => 'required',
         'harga' => 'required|numeric',
+        'stok'  => 'required|numeric',
         'deskripsi_produk' => 'required',
     ]);
 
-    
-    Produk::create([
-        'nama_produk' => $request->nama_produk,
-        'harga' => $request->harga,
-        'deskripsi_produk' => $request->deskripsi_produk,
-        'kategori_id' => 1, 
-    ]);
+    \App\Models\produk::create($request->all());
 
     
     return redirect()->route('produk.index')->with('success', 'Data berhasil ditambah!');
@@ -52,6 +47,7 @@ public function update(Request $request, $id)
     $request->validate([
         'nama_produk' => 'required',
         'harga' => 'required|numeric',
+        'stok'  => 'required|numeric',
         'deskripsi_produk' => 'required',
     ]);
 
@@ -59,6 +55,7 @@ public function update(Request $request, $id)
     $produk->update([
         'nama_produk' => $request->nama_produk,
         'harga' => $request->harga,
+        'stok' => $request->stok,
         'deskripsi_produk' => $request->deskripsi_produk,
     ]);
 

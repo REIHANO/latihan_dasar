@@ -43,7 +43,7 @@
                         <th scope="row">{{ $key + 1 }}</th>
                         <td>{{ $item->nama_produk }}</td>
                         <td>{{ $item->deskripsi_produk ?? 'Tidak ada deskripsi' }}</td>                     
-                        <td>0</td> 
+                        <td>{{ $item->stok }}</td> 
                         <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
                         <td>
                             <a href="{{ route('produk.edit', $item->id_produk) }}" class="btn btn-warning btn-sm">Edit</a>

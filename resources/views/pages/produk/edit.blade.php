@@ -29,6 +29,11 @@
                     <textarea name="deskripsi_produk" class="form-control" rows="3">{{ $produk->deskripsi_produk }}</textarea>
                     @error('deskripsi_produk') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
+                <div class="mb-3">
+    <label class="form-label">Stok Produk</label>
+    <input type="number" name="stok" class="form-control" value="{{ old('stok', $produk->stok) }}">
+    @error('stok') <small class="text-danger">{{ $message }}</small> @enderror
+</div>
 
                 <div class="mt-4">
                     <button type="submit" class="btn btn-warning">Update Produk</button>

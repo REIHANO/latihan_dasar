@@ -17,9 +17,38 @@
           <a class="nav-link" href="/contact">kontak</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="/product">produk kami</a>
+          <a class="nav-link" href="/produk">produk kami</a>
         </li>
       </ul>
+      <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-user"></i> 
+            <strong>{{ Auth::user()->name }}</strong>
+        </a>
+<ul class="navbar-nav ms-auto">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="far fa-user"></i> 
+            <strong>{{ Auth::user()->name }}</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><span class="dropdown-header">Pengaturan Akun</span></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a href="#" class="dropdown-item" 
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fas fa-sign-out-alt mr-2 text-danger"></i> Keluar Aplikasi
+                </a>
+            </li>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </ul>
+    </li>
+</ul>
+
     </div>
   </div>
 </nav>
