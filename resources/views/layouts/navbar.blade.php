@@ -17,7 +17,7 @@
           <a class="nav-link" href="/contact">kontak</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="/produk">produk kami</a>
+          <a class="nav-link" href="/product">produk kami</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
