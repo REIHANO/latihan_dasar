@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('produk', function (Blueprint $table) {
-            $table->id('id_produk'); // Mengubah 'id' menjadi 'id_produk'
-            $table->string('nama_produk', 150); // Menambah kolom Nama (max 150 karakter)
-            $table->integer('harga'); // Menambah kolom Harga
-            $table->text('deskripsi_produk'); // Menambah kolom Deskripsi
-            $table->timestamps(); // Tetap biarkan ini untuk created_at & updated_at
+       Schema::create('products', function (Blueprint $table) {
+            $table->id(); 
+            $table->string('name', 150); 
+            $table->integer('price'); 
+            $table->text('description'); 
+            $table->timestamps();
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('produks');
+        Schema::dropIfExists('products');
     }
 };

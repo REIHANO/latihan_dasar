@@ -55,10 +55,10 @@
                                 <td>Rp {{ number_format($item->price, 0, ',', '.') }}</td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <a href="{{ route('product.edit', $item->product_id) }}" class="btn btn-sm btn-warning">
+                                        <a href="{{ route('product.edit', $item->id) }}" class="btn btn-sm btn-warning">
                                             <i class="fas fa-edit"></i> Edit
                                         </a>
-                                        <form action="{{ route('product.destroy', $item->product_id) }}" method="POST" onsubmit="return confirm('Yakin hapus data?')">
+                                        <form action="{{ route('product.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Yakin hapus data?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger ml-1">

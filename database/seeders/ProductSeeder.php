@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB; // 1. TAMBAHKAN INI (Wajib agar DB bisa jalan)
 
-class ProdukSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,18 +14,18 @@ class ProdukSeeder extends Seeder
     public function run(): void
     {
         // 2. TAMBAHKAN KODE INSERT DI SINI
-        DB::table('produk')->insert([
+        DB::table('products')->insert([
             [
-                'nama_produk' => 'Smart TV Samsung 24 inch',
-                'harga' => 2500000,
-                'deskripsi_produk' => 'TV LED berkualitas tinggi',
+                'name' => 'Smart TV Samsung 24 inch',
+                'price' => 2500000,
+                'description' => 'TV LED berkualitas tinggi',
                 'created_at' => now(), // 3. Tambahkan ini agar waktu input tercatat
                 'updated_at' => now(),
             ],
             [
-                'nama_produk' => 'Laptop Lenovo Thinkpad',
-                'harga' => 5000000,
-                'deskripsi_produk' => 'Laptop kencang untuk coding',
+                'name' => 'Laptop Lenovo Thinkpad',
+                'price' => 5000000,
+                'description' => 'Laptop kencang untuk coding',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

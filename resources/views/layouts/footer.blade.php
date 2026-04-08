@@ -1,8 +1,6 @@
 <style>
     .footer{
       position: absolute;
-      bottom: 0;
-      right: 0;
       height: 50px;
       width: 100%;
       background-color: #303030
@@ -10,7 +8,7 @@
       text-align: center;
       line-height: 50px;
       flex-column: min-vh-100
-
+      margin-top: 20px;
     }
     </style>
 

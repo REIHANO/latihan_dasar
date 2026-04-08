@@ -30,7 +30,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'        => 'required',
-            'category_id' => 'required',
+            'category_id' => 'required|exists:categories,id',
             'price'       => 'required|numeric',
             'stock'       => 'required|numeric',
             'description' => 'required',
@@ -52,7 +52,7 @@ class ProductController extends Controller
     {
         $request->validate([
             'name'        => 'required',
-            'category_id' => 'required', 
+            'category_id' => 'required|exists:categories,id',
             'price'       => 'required|numeric',
             'stock'       => 'required|numeric',
             'description' => 'required',
@@ -61,7 +61,7 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $product->update($request->all());
 
-        return redirect()->route('product.index')->with('message', 'Data berhasil diubah!');
+        return redirect()->route('product.index')->with('success', 'Data berhasil diubah!');
     }
 
     public function destroy($id)
