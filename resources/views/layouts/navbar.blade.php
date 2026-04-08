@@ -20,12 +20,7 @@
           <a class="nav-link" href="/product">produk kami</a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
-    <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-user"></i> 
-            <strong>{{ Auth::user()->name }}</strong>
-        </a>
+      
 <ul class="navbar-nav ms-auto">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
