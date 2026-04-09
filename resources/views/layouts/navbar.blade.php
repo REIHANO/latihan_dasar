@@ -25,7 +25,13 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="far fa-user"></i> 
-            <strong>{{ Auth::user()->name }}</strong>
+           @auth
+            <span>{{ Auth::user()->name }}</span>
+            @endauth
+
+            @guest
+            <a href= "/login">Login</a>
+            @endguest
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><span class="dropdown-header">Pengaturan Akun</span></li>
